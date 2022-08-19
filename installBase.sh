@@ -12,10 +12,10 @@ Help()
 Help
 
 echo "installing essential tools"
-apt update && apt install -y python3
+apt update && apt install -y python3 python3-pip
 pip install --user ansible
 
 echo "prepare for ansible install"
 export PATH=$HOME/.local/bin:$PATH
-$(which ansible-playbook) main.yaml
+#$(which ansible-playbook) main.yaml
 
