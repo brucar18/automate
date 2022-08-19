@@ -1,0 +1,13 @@
+---
+
+ - name: Install portainer base
+   hosts: localhost
+   become: true
+   tasks: 
+    - name: apt install docker.io
+      apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+      - docker.io

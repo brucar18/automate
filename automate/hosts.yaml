@@ -1,0 +1,9 @@
+all:
+  hosts:
+    portainer1:
+  children:
+    slaves:
+      hosts:
+        portainer2:
+        portainer3:
+
