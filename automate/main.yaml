@@ -1,8 +1,7 @@
 ---
 
  - name: Install portainer base
-   hosts: localhost
-   become: true
+   hosts: all 
    tasks: 
     - name: apt install docker.io
       apt:
