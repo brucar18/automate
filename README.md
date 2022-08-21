@@ -7,7 +7,7 @@ Install latest debain image and run:
 
 ```shell
 apt-get update
-apt-get install -y wget bash-completion python3
+apt-get install -y wget bash-completion git python3
 ```
 
 1.1) Setup Master and Slave node  
