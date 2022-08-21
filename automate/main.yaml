@@ -10,3 +10,12 @@
         update_cache: yes
       loop:
       - docker.io
+      - python3-pip
+
+    - name: install ansible docker plugin
+      shell: "pip3 install docker-py"
+      register: os_info
+
+    - name: add git repo
+      shell: "git clone https://github.com/brucar18/automate.git"
+      register: os_info

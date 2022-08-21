@@ -1,0 +1,20 @@
+---
+- name: install swarm agent nodes
+  hosts: all
+  tasks:
+    - name: build docker images
+      docker_image:
+        name: web
+        build: 
+          path: /root/automate/automate/dockers/web
+        source: build
+        state: present
+        tag: latest
+    - name: build docker images
+      docker_image:
+        name: proxy
+        build: 
+          path: /root/automate/automate/dockers/haproxy
+        source: build
+        state: present
+        tag: latest
