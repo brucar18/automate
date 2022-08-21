@@ -1,9 +1,0 @@
----
-- name: install swarm agent nodes
-  hosts: portainer2 portainer3
-  tasks:
-  
-  - name: install swarm network
-    shell: "docker swarm join --token SWMTKN-1-533gvyf8jx4kwmxf8lsiq60h0p2yz6h1mufedydp6aavuc0ie0-3uibc43clx1kqmgzfufr5k0z3 192.168.253.180"
-    register: os_info
-
