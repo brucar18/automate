@@ -1,0 +1,15 @@
+version: '3'  
+  
+services:  
+  web1: # web service  
+    image: web  
+    ports:  
+      - 8080:80  
+    container_name: 'web1'  
+   
+  haproxy:  # Haproxy service  
+    image: proxy  
+    ports:  
+      - 80:80
+      - 443:443 
+    container_name: 'haproxy'   

@@ -10,3 +10,4 @@
         update_cache: yes
       loop:
       - docker.io
+      - docker-compose
