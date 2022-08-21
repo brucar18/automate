@@ -94,11 +94,11 @@ ansible-playbook -i hosts.yaml buildImages.yaml
 after this task is completed go to Portainer web and create new stack  
   
 1.) Choose local, then select stack and Add stack  
-
+![image](https://user-images.githubusercontent.com/9293798/185809196-0ede69b0-0106-4516-9efe-1545666f887b.png)
   
 Copy content of docker-compose.yaml into web editor. Disable access control and deploy stack.  
-
+![image](https://user-images.githubusercontent.com/9293798/185809264-8ff9443c-e6c5-4b7d-b167-214f6d562b94.png)
   
 Voila your webserver is up and running.
-
+![image](https://user-images.githubusercontent.com/9293798/185809267-1262be9c-abdc-43e8-b5ec-b3e5321ba57c.png)
   
