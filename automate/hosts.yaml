@@ -1,9 +1,12 @@
 all:
   hosts:
     portainer1:
+      ansible_host: 192.168.253.180
   children:
     slaves:
       hosts:
         portainer2:
+          ansible_host: 192.168.253.181
         portainer3:
+          ansible_host: 192.168.253.182
 

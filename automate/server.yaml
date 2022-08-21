@@ -1,8 +1,15 @@
 ---
 - name: install server node1
-  hosts: localhost
+  hosts: portainer1
   tasks:
+  - name: create prermanet storage 
+    shell: "docker volume create portainer_data"
+    register: os_info
   
   - name: run docker server
     shell: "docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest"
+    register: os_info
+  
+  - name: create docker swarm
+    shell: "docker swarm init --advertise-addr {{ ansible_ssh_host }}"
     register: os_info
