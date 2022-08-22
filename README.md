@@ -2,8 +2,8 @@
 #### 1.) Prepare virtual machine  
 
 
-For this installation it was used latest debian bullseye
-Best is to do as root.  
+For this installation it was used latest debian bullseye. 
+Do install as root.  
 Install latest debian image and run on all nodes:
 
 ```shell
