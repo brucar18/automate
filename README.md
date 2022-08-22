@@ -2,8 +2,9 @@
 #### 1.) Prepare virtual machine  
 
 
+For this installation it was used latest debian bullseye
 Best is to do as root.  
-Install latest debain image and run:
+Install latest debian image and run on all nodes:
 
 ```shell
 apt-get update
@@ -11,7 +12,7 @@ apt-get install -y wget bash-completion git python3
 ```
 
 1.1) Setup Master and Slave node  
-On Master node generate ssh-key ( ssh-keygen ). Put .pub to authorized\_keys on slave nodes.  
+On Master node generate ssh-key ( ssh-keygen ). Put .pub key of master to authorized\_keys on slave nodes.  
 check if ssh from master to slaves work.  
 With your favorite editor edit /etc/hosts, add all hosts ( IP hostname )  
   
@@ -39,7 +40,7 @@ in root folder clone repo
 git clone https://github.com/brucar18/automate.git
 ```
 
-Move into automate dir and edit hosts.yaml
+Move into automate dir and edit hosts.yaml to match your configuration
 
 Edit host name and ip addresses to match yours in /etc/hosts
 
@@ -73,7 +74,7 @@ ansible-playbook -i hosts.yaml server.yaml
 
 Setup swarm agents  
   
-First generate swarm agent task and then depoy it.
+First generate swarm agent task and then deploy it to slaves.
 
 ```shell
 ./gen_swarm.sh
@@ -85,7 +86,7 @@ Then login to portainer master node and create admin account
 
 #### 3.) Prepare dockers
 
-run playbook so it will build image on all 3 nodes.
+Run playbook for dockers it will build image on all 3 nodes.
 
 ```shell
 ansible-playbook -i hosts.yaml buildImages.yaml
