@@ -18,4 +18,5 @@ pip install --user ansible
 echo "prepare for ansible install"
 export PATH=$HOME/.local/bin:$PATH
 #$(which ansible-playbook) main.yaml
+echo "some text"
 

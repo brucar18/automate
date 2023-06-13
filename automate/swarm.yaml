@@ -1,0 +1,9 @@
+---
+- name: install swarm agent nodes
+  hosts: portainer2 portainer3
+  tasks:
+  
+  - name: install swarm network
+    shell: "changeme"
+    register: os_info
+
